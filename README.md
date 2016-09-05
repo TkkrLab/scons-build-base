@@ -1,15 +1,39 @@
-# scons build base
+# project structure
 
-this repo contains a base for c/c++ projects using scons.
+typical project structure looks like:
 
-in the sconstruct file you can set the cc but probably gcc is fine even if you do
+```
+    ->project
+        ->include
+            ->includes.x
+        ->src
+            ->sources.x
+        ->libraries (contains other sources that follow the same directory structure)
+            ->projecty
+        ->lib (contains src build into a librarie)
+            ->libs.x
+        Sconstruct
+        README.md
+        LICENSE.txt
+```
 
-C or C++ it will choose rightly.
+# build modes
 
-when you build with this script it creates a build director and in it a folder 
+this build script enables three build modes namely:
 
-src that contains compiled sources, 
+```
+$ scons devbuild
+$ scons libbuild
+$ scons
+```
+devbuild builds with development flags and debug flags.
 
-and also a executable that is your program.
+such include -O0 and -ggdb3
+
+libbuild builds like a release but instead builds a static library.
+
+and the last without and build targets specified, builds a release version,
+
+which turns on some optimizations.
 
 
