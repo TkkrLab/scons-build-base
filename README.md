@@ -10,7 +10,7 @@ typical project structure looks like:
             ->sources.x
         ->libraries (contains other sources that follow the same directory structure)
             ->projecty
-        ->lib (contains src build into a librarie)
+        ->lib (contains src build into a library)
             ->libs.x
         Sconstruct
         README.md
