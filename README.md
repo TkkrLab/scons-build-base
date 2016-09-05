@@ -31,8 +31,9 @@ devbuild builds with development flags and debug flags.
 such include -O0 and -ggdb3
 
 libbuild builds like a release but instead builds a static library.
+includes flags like: -fPIC
 
-and the last without and build targets specified, builds a release version,
+and the last without and build target specified, builds a release version,
 
 which turns on some optimizations.
 
